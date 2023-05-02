@@ -36,12 +36,9 @@ function createHtmlString({ name, size, type }) {
       <div class="file__info">
         <div class="file__info__name">${name}</div>
         <div class="file__info__type">${type}</div>
-        <div class="file__info__size">${removeTrailingZero(sizeInMB)} MB ${size}</div>
+        <div class="file__info__size">${removeTrailingZero(sizeInMB)} MB</div>
       </div>
     </div>
-    <a class="drop-file">
-        <div class="trash-icon"></div>
-    </a>
   `
 }
 
