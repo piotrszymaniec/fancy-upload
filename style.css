@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'Asap-SemiBold';
+  src: url('./assets/fonts/Asap-SemiBold.ttf.woff') format('woff'),
+    url('./assets/fonts/Asap-SemiBold.ttf.svg') format('svg'),
+    url('./assets/fonts/Asap-SemiBold.ttf.eot'),
+    url('./assets/fonts/Asap-SemiBold.ttf.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FallingSky';
+  src: url('./assets/fonts/FallingSky.otf') format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 32px;
+}
+
+/* 
+.file-type.icon {
+  width: 48px;
+} */
+
+input.upload-input {
+  /* display: none; */
+}
+
+body {
+  font-family: 'FallingSky';
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  margin-top: 50px;
+  width: 680px;
+  border: 1px solid hsl(0deg 0% 82.52%);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: hsl(221.18deg 100% 90%) 1px 1px 4px 0px;
+}
+
+.drop-zone {
+  /* border: 1px dashed hsl(0deg, 0%, 50%);   */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='gray' stroke-width='2' stroke-dasharray='4%2c 7' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  margin-bottom: 15px;
+}
+
+.drop-zone .upload-icon {
+  width: 64px;
+}
+
+.drop-zone label {
+  text-decoration: underline;
+  color: rgb(0, 26, 255);
+  cursor: pointer;
+}
+
+.drop-zone .upload-text {
+  font-size: 1.2rem;
+}
+
+.controls {
+  width: 100%;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.controls button {
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  padding: 7px 14px;
+  border-radius: 3px;
+  transition: background-color ease-in 0.3s;
+  font-family: 'FallingSky';
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
+
+.controls button:hover {
+  background-color: rgb(169, 199, 255);
+}
+
+.uploaded-files {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.uploaded-file {
+  background-color: #fafcfd;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid hsl(180deg 9.09% 89.22%);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  align-items: center;
+  padding: 17px 25px;
+  padding-top: 30px;
+  box-shadow: hsl(180deg 4% 90.2%) 2px 2px 4px 0px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+}
+
+.file__type {
+  position: relative;
+  top: 2px;
+}
+
+.file__type img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.file__info {
+  font-family: 'FallingSky';
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.file__info__name {
+  font-size: 1.1rem;
+}
+
+.file__info__size {
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.trash-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url(./assets/icons/trash-bin.gif);
+  cursor: pointer;
+}
+
+.trash-icon:hover {
+  background: url(./assets/icons/trash-bin-animate.gif);
+}

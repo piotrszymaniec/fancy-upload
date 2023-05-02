@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <base href="./">
+  <title>Fancy Upload</title>
+</head>
+
+<body>
+  <main class="upload-widget">
+    <div class="drop-zone">
+      <img src="/assets/icons/file-upload-icon.svg" alt="" class="upload-icon icon">
+      <p class="upload-text">Drag and drop or
+        <label><input id="upload-input" class="upload-input" type="file" multiple>browse</label>
+      </p>
+    </div>
+    <div class="uploaded-files">
+      <!-- if input switched to mulitfile -->
+      <div class="uploaded-file">
+        <div class="file">
+          <div class="file__type"><img class="file-type" src="/assets/icons/avi-file-icon.svg" alt="file type icon">
+          </div>
+          <div class="file__info">
+            <div class="file__info__name">loremipsum.png</div>
+            <div class="file__info__size">101 MB</div>
+          </div>
+        </div>
+        <a class="drop-file">
+            <div class="trash-icon"></div>
+        </a>
+      </div>
+      <!-- <div class="uploaded-file">
+        <div class="file">
+          <div class="file__type"><img class="file-type" src="/assets/icons/ai-file-icon.svg" alt="file type icon">
+          </div>
+          <div class="file__info">
+            <div class="file__info__name">loremipsum.png</div>
+            <div class="file__info__size">101 MB</div>
+          </div>
+        </div>
+        <a class="drop-file">
+            <div class="trash-icon"></div>
+        </a>
+      </div> -->
+    </div>
+    <div class="controls">
+      <button class="cancel-uploading">Cancel</button>
+      <!-- <button>Add files</button> -->
+    </div>
+  </main>
+</body>
+
+</html>
