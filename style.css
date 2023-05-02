@@ -1,14 +1,4 @@
 @font-face {
-  font-family: 'Asap-SemiBold';
-  src: url('./assets/fonts/Asap-SemiBold.ttf.woff') format('woff'),
-    url('./assets/fonts/Asap-SemiBold.ttf.svg') format('svg'),
-    url('./assets/fonts/Asap-SemiBold.ttf.eot'),
-    url('./assets/fonts/Asap-SemiBold.ttf.eot') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'FallingSky';
   src: url('./assets/fonts/FallingSky.otf') format("opentype");
 }
@@ -21,13 +11,8 @@
   width: 32px;
 }
 
-/* 
-.file-type.icon {
-  width: 48px;
-} */
-
 input.upload-input {
-  /* display: none; */
+  display: none;
 }
 
 body {
@@ -40,20 +25,20 @@ main {
   margin-top: 50px;
   width: 680px;
   border: 1px solid hsl(0deg 0% 82.52%);
-  padding: 30px;
+  padding: 5px;
   border-radius: 5px;
   box-shadow: hsl(221.18deg 100% 90%) 1px 1px 4px 0px;
 }
 
 .drop-zone {
-  /* border: 1px dashed hsl(0deg, 0%, 50%);   */
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 15px;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='gray' stroke-width='2' stroke-dasharray='4%2c 7' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-  margin-bottom: 15px;
+  background-color: #f7f7f7;
+  padding: 40px;
 }
 
 .drop-zone .upload-icon {
@@ -77,11 +62,8 @@ main {
 }
 
 .controls button {
-  background-color: transparent;
-  border: none;
-  font-weight: 700;
-  color: rgb(255, 0, 0);
   cursor: pointer;
+  border: 1px solid #bdbdbd;
   padding: 7px 14px;
   border-radius: 3px;
   transition: background-color ease-in 0.3s;
@@ -91,16 +73,21 @@ main {
 }
 
 .controls button:hover {
-  background-color: rgb(169, 199, 255);
+  background-color: #c6c6c6;
+
 }
 
-.uploaded-files {
+.controls .remove-files:hover {
+  background-color: #ff000029;
+}
+
+.uploaded-files-container {
   display: flex;
   flex-direction: column;
-
+  margin-top: 15px;
 }
 
-.uploaded-file {
+.uploaded-file-item {
   background-color: #fafcfd;
   display: flex;
   justify-content: space-between;
@@ -146,6 +133,12 @@ main {
   font-family: monospace;
 }
 
+.file__info__type {
+  font-size: 0.9rem;
+  color: rgb(38, 103, 255);
+  font-family: monospace;
+}
+
 .trash-icon {
   width: 24px;
   height: 24px;
@@ -155,4 +148,8 @@ main {
 
 .trash-icon:hover {
   background: url(./assets/icons/trash-bin-animate.gif);
+}
+
+.hidden {
+  display: none;
 }
