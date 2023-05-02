@@ -1,4 +1,5 @@
 import { fileIcons, mimeIcons } from "./data.js"
+
 const uploadedContainer = document.querySelector('.uploaded-files-container')
 const controls = document.querySelector('.controls')
 
