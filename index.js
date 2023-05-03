@@ -1,22 +1,23 @@
 import { createView, resetView } from "./helpers.js"
 
-const dropzone = document.querySelector('.drop-zone')
-const uploadInput = document.querySelector('[data-upload-input]')
-const controls = document.querySelector('.controls')
+const $fancyUpload = document.querySelector('[data-fancyupload]')
+const $dropzone = $fancyUpload.querySelector('[data-fancyupload-dropzone]')
+const $uploadInput = $fancyUpload.querySelector('[data-fancyupload-input]')
+const $removeFilesBtn = $fancyUpload.querySelector('[data-fancyupload-remove-files-btn]')
 
 
-uploadInput.addEventListener('change', onFileSelected)
-controls.addEventListener('click', onFileRemove)
+$uploadInput.addEventListener('change', onFileSelected)
+$removeFilesBtn.addEventListener('click', onFileRemove)
 
 function onFileRemove() {
   resetView()
 }
 
-dropzone.addEventListener('dragover', (e) => {
+$dropzone.addEventListener('dragover', (e) => {
   e.preventDefault()
 })
 
-dropzone.addEventListener('drop', (e) => {
+$dropzone.addEventListener('drop', (e) => {
   e.preventDefault()
   const files = e.dataTransfer.files
   createView(files)

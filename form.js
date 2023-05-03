@@ -1,4 +1,4 @@
-const form = document.querySelector('[data-form-upload]')
+const form = document.querySelector('[data-fancyupload-form]')
 
 const submitBtn = document.querySelector('.controls .submit-btn')
 

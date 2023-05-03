@@ -1,7 +1,8 @@
 import { fileIcons, mimeIcons } from "./data.js"
 
-const uploadedContainer = document.querySelector('.uploaded-files-container')
-const controls = document.querySelector('.controls')
+const $fancyUpload = document.querySelector('[data-fancyupload]')
+const $uploadedContainer = $fancyUpload.querySelector('[data-fancyupload-container]')
+const controls = $fancyUpload.querySelector('.controls')
 
 function createElement(htmlString, className) {
   const element = document.createElement('div')
@@ -50,16 +51,16 @@ function hideElement(element) {
 }
 
 function createView(files) {
-  const filesElements = [...files].map(file => createElement(createHtmlString(file), 'uploaded-file-item'))
-  uploadedContainer.append(...filesElements)
+  const uploadedFileItemElements = [...files].map(file => createElement(createHtmlString(file), 'uploaded-file-item'))
+  $uploadedContainer.append(...uploadedFileItemElements)
   showElement(controls)
-  showElement(uploadedContainer)
+  showElement($uploadedContainer)
 }
 
 function resetView() {
-  uploadedContainer.innerHTML = ''
+  $uploadedContainer.innerHTML = ''
   hideElement(controls)
-  hideElement(uploadedContainer)
+  hideElement($uploadedContainer)
 }
 
 export { createView, resetView }

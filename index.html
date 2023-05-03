@@ -11,22 +11,22 @@
 </head>
 
 <body>
-  <main class="upload-widget">
-    <div class="drop-zone">
+  <div data-fancyupload class="fancyupload">
+    <div data-fancyupload-dropzone class="dropzone">
       <img src="/assets/icons/file-upload-icon.svg" alt="" class="upload-icon icon">
-      <form data-form-upload enctype="multipart/form-data">
+      <form data-fancyupload-form enctype="multipart/form-data">
         <p class="upload-text">Drag and drop files or
-          <label><input data-upload-input class="upload-input" type="file" multiple />browse</label>
+          <label><input data-fancyupload-input class="upload-input" type="file" multiple />browse</label>
       </form>
       </p>
     </div>
-    <div class="uploaded-files-container hidden">
+    <div data-fancyupload-container class="uploaded-container hidden">
     </div>
-    <div class="controls hidden">
-      <button class="remove-files-btn">Cancel</button>
-      <!-- <button class="submit-btn">Submit</button> -->
+    <div data-fancyupload-controls class="controls hidden">
+      <button data-fancyupload-remove-files-btn class="remove-files-btn">Cancel</button>
+      <!-- <button submit-files-btn class="submit-btn">Submit</button> -->
     </div>
-  </main>
+  </div>
   <script src="index.js" type="module"></script>
 </body>
 
