@@ -34,10 +34,18 @@ function chooseIconName(fileName, fileMimeType) {
   return 'unknown'
 }
 
+function formatBytes(bytes) {
+  var units = ["bytes", "KB", "MB", "GB", "TB"];
+  var i = 0;
+  while (bytes >= 1024 && i < units.length - 1) {
+    bytes /= 1024;
+    i++;
+  }
+  var num = Math.round(bytes * 100) / 100;
+  return num.toString() + " " + units[i];
+}
 
 function createHtmlString({ name, size, type }) {
-  const sizeInMB = (size / 1024 ** 2).toFixed(4)
-  const removeTrailingZero = (num) => num.toString().replace(/\.?0+$/, '')
   return ` 
     <div class="file">
       <div class="file__type"><img class="file-type" src="./assets/icons/filetype/${chooseIconName(name, type)}.svg" alt="file type icon">
@@ -45,7 +53,7 @@ function createHtmlString({ name, size, type }) {
       <div class="file__info">
         <div class="file__info__name">${name}</div>
         <div class="file__info__type">${type}</div>
-        <div class="file__info__size">${removeTrailingZero(sizeInMB)} MB</div>
+        <div class="file__info__size">${formatBytes(size)}</div>
       </div>
     </div>
   `
