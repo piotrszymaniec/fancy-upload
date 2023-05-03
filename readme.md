@@ -22,6 +22,6 @@ Modified and added several file icons:
 - [ ] more file icons
 
 ## Thanks
-- whoever made this lovely file icons and uploaded it to https://www.svgrepo.com
+- whoever made this lovely file icons and uploaded it to https://www.svgrepo.com/collection/files-folders-5/
 - nice wider dash in file drop zone https://kovart.github.io/dashed-border-generator/
 - FallingSky font - free for personal use http://www.ffonts.net
