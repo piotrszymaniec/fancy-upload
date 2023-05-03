@@ -32,7 +32,7 @@ function createHtmlString({ name, size, type }) {
   const removeTrailingZero = (num) => num.toString().replace(/\.?0+$/, '')
   return ` 
     <div class="file">
-      <div class="file__type"><img class="file-type" src="/assets/icons/filetype/${chooseIconName(name, type)}.svg" alt="file type icon">
+      <div class="file__type"><img class="file-type" src="./assets/icons/filetype/${chooseIconName(name, type)}.svg" alt="file type icon">
       </div>
       <div class="file__info">
         <div class="file__info__name">${name}</div>
