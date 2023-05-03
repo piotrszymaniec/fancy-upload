@@ -1,4 +1,4 @@
-import { fileIcons, mimeIcons } from "./data.js"
+import { fileIcons, mimeIcons } from "./icons.js"
 
 const $fancyUpload = document.querySelector('[data-fancyupload]')
 const $uploadedContainer = $fancyUpload.querySelector('[data-fancyupload-container]')
