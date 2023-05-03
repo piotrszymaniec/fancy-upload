@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'FallingSky';
-  src: url('./assets/fonts/FallingSky.otf') format("opentype");
+  src: url('../assets/fonts/FallingSky.otf') format("opentype");
 }
 
 * {
