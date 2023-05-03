@@ -16,9 +16,10 @@ Modified and added several file icons:
   - audio, image, video (general files)
 
 ### TODO
-- [ ] file size
-- [ ] form submition logic
-- [ ] removing selected file from uploaded list
+- [x] add file size in Bytes, and Kilobytes
+- [ ] transfer from demo to easy external implementation
+- [ ] add form submition logic
+- [ ] add fucnctionality for removing selected file from uploaded list
 - [ ] more file icons
 
 ## Thanks
