@@ -7,14 +7,6 @@
   box-sizing: border-box;
 }
 
-.icon {
-  width: 32px;
-}
-
-input.upload-input {
-  display: none;
-}
-
 body {
   background-color: #ecf5fd;
   font-family: 'FallingSky';
@@ -32,7 +24,11 @@ body {
   box-shadow: hsl(221.18deg 100% 90%) 1px 1px 4px 0px;
 }
 
-.dropzone {
+.fancyupload input.upload-input {
+  display: none;
+}
+
+.fancyupload .dropzone {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -43,26 +39,26 @@ body {
   padding: 40px;
 }
 
-.dropzone .upload-icon {
+.fancyupload .dropzone .upload-icon {
   width: 64px;
 }
 
-.dropzone label {
+.fancyupload .dropzone label {
   text-decoration: underline;
   color: rgb(0, 26, 255);
   cursor: pointer;
 }
 
-.dropzone .upload-text {
+.fancyupload .dropzone .upload-text {
   font-size: 1.2rem;
 }
 
-.controls {
+.fancyupload .controls {
   text-align: right;
   margin: 20px;
 }
 
-.controls button {
+.fancyupload .controls button {
   cursor: pointer;
   border: 1px solid #bdbdbd;
   padding: 7px 14px;
@@ -73,22 +69,22 @@ body {
   letter-spacing: 0.5px;
 }
 
-.controls button:hover {
+.fancyupload .controls button:hover {
   background-color: #c6c6c6;
 
 }
 
-.controls .remove-files-btn:hover {
+.fancyupload .controls .remove-files-btn:hover {
   background-color: #ff000029;
 }
 
-.uploaded-container {
+.fancyupload .uploaded-container {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
 }
 
-.uploaded-file-item {
+.fancyupload .uploaded-container .uploaded-file-item {
   background-color: #fafcfd;
   display: flex;
   justify-content: space-between;
@@ -101,7 +97,7 @@ body {
   box-shadow: hsl(180deg 4% 90.2%) 2px 2px 4px 0px;
 }
 
-.file {
+.fancyupload .uploaded-container .uploaded-file-item .file {
   display: flex;
   align-items: center;
 }
@@ -149,8 +145,4 @@ body {
 
 .trash-icon:hover {
   background: url(./assets/icons/trash-bin-animate.gif);
-}
-
-.hidden {
-  display: none;
 }
