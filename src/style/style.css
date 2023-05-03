@@ -82,7 +82,7 @@
 .fancyupload .uploaded-container .uploaded-file-item {
   background-color: #fafcfd;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border: 1px solid hsl(180deg 9.09% 89.22%);
   border-radius: 4px;
   margin-bottom: 10px;
