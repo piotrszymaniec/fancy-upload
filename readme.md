@@ -16,6 +16,7 @@ Modified and added several file icons:
   - audio, image, video (general files)
 
 ### TODO
+- [ ] file size
 - [ ] form submition logic
 - [ ] removing selected file from uploaded list
 - [ ] more file icons
