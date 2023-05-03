@@ -7,14 +7,9 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #ecf5fd;
-  font-family: 'FallingSky';
-  display: flex;
-  justify-content: center;
-}
 
 .fancyupload {
+  font-family: 'FallingSky';
   margin-top: 10px;
   width: 680px;
   border: 1px solid hsl(0deg 0% 82.52%);
