@@ -22,7 +22,6 @@ Modified and added several file icons:
 - [ ] more file icons
 
 ## Thanks
-- graphic layout inspired by Alex Lauderdale https://dribbble.com/Alauderdale10
 - whoever made this lovely file icons and uploaded it to https://www.svgrepo.com
 - nice wider dash in file drop zone https://kovart.github.io/dashed-border-generator/
 - FallingSky font - free for personal use http://www.ffonts.net
