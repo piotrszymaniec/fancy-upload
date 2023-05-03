@@ -3,6 +3,14 @@ import { fileIcons, mimeIcons } from "./data.js"
 const $fancyUpload = document.querySelector('[data-fancyupload]')
 const $uploadedContainer = $fancyUpload.querySelector('[data-fancyupload-container]')
 const controls = $fancyUpload.querySelector('.controls')
+const $downloadImg = $fancyUpload.querySelector('img')
+
+function setUploadIconSuccess() {
+  $downloadImg.src = 'assets/icons/file-upload-success.svg'
+}
+function resetUploadIcon() {
+  $downloadImg.src = 'assets/icons/file-upload-icon.svg'
+}
 
 function createElement(htmlString, className) {
   const element = document.createElement('div')
@@ -53,12 +61,14 @@ function hideElement(element) {
 function createView(files) {
   const uploadedFileItemElements = [...files].map(file => createElement(createHtmlString(file), 'uploaded-file-item'))
   $uploadedContainer.append(...uploadedFileItemElements)
+  setUploadIconSuccess()
   showElement(controls)
   showElement($uploadedContainer)
 }
 
 function resetView() {
   $uploadedContainer.innerHTML = ''
+  resetUploadIcon()
   hideElement(controls)
   hideElement($uploadedContainer)
 }
