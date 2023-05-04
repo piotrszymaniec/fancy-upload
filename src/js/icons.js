@@ -3,7 +3,8 @@ const mimeIcons = [
   'audio',
   'image',
   'video',
-  'font'
+  'font',
+  'text'
 ]
 const fileIcons = ['3ds',
   'ai',
