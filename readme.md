@@ -19,8 +19,8 @@ Modified and added several file icons:
 - [x] add file size in Bytes, and Kilobytes
 - [ ] transfer from demo to easy external implementation
 - [ ] add form submition logic
-- [ ] add fucnctionality for removing selected file from uploaded list
-- [ ] more file icons
+- [ ] add functionality for removing selected file from uploaded list
+- [ ] more file icons for popular mime types http://www.iana.org/assignments/media-types/media-types.xhtml
 
 ## Thanks
 - whoever made this lovely file icons and uploaded it to https://www.svgrepo.com/collection/files-folders-5/
