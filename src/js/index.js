@@ -1,13 +1,9 @@
 import { createView, resetView, resetUploadedContainer, clearFormInput, createUniqueFileList } from "./helpers.js"
 
-
 const $fancyUpload = document.querySelector('[data-fancyupload]')
 const $dropzone = $fancyUpload.querySelector('[data-fancyupload-dropzone]')
 const $uploadInput = $fancyUpload.querySelector('[data-fancyupload-input]')
 const $removeFilesBtn = $fancyUpload.querySelector('[data-fancyupload-remove-files-btn]')
-const $form = $fancyUpload.querySelector('[data-fancyupload-form]')
-const $uploadedContainerItems = $fancyUpload.querySelector('[data-fancyupload-container]')
-
 
 const fileStorage = {
   data: new DataTransfer(),
@@ -24,12 +20,12 @@ const fileStorage = {
   }
 }
 
-
 $uploadInput.addEventListener('click', onFormInputClick)
 $uploadInput.addEventListener('change', onFileBrowsed)
 $dropzone.addEventListener('dragover', (e) => {
   e.preventDefault()
 })
+
 $dropzone.addEventListener('drop', onFilesDropped)
 $removeFilesBtn.addEventListener('click', onFilesRemove)
 
