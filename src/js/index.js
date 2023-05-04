@@ -19,7 +19,7 @@ function onFileBrowsed(e) {
   const { target: { files } } = e
   $uploadInput.files = fileStorage.addFiles(files)
   resetUploadedContainer()
-  createView(mergedFileLists)
+  createView($uploadInput.files)
 }
 
 function onFilesDropped(e) {
@@ -27,7 +27,7 @@ function onFilesDropped(e) {
   const droppedFiles = e.dataTransfer.files
   $uploadInput.files = fileStorage.addFiles(droppedFiles)
   resetUploadedContainer()
-  createView(mergedFileLists)
+  createView($uploadInput.files)
 }
 
 function onFilesRemove() {
