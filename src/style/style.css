@@ -117,6 +117,7 @@
 
 .file__info__name {
   font-size: 1.1rem;
+  overflow-wrap: anywhere;
 }
 
 .file__info__size {
