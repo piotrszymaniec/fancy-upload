@@ -8,9 +8,6 @@ const fileStorage = {
     Array.from(mergedFileLists).forEach(file => this.data.items.add(file))
     return this.data.files
   },
-  getFiles() {
-    return this.data.files
-  },
   removeFiles() {
     this.data.items.clear()
   },
