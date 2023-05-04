@@ -25,10 +25,8 @@ function onFileBrowsed(e) {
 
 function onFilesDropped(e) {
   e.preventDefault()
-  const currentFiles = $uploadInput.files
   const droppedFiles = e.dataTransfer.files
   const mergedFileLists = fileStorage.addFiles(droppedFiles)
-  // const mergedFileLists = createUniqueFileList(currentFiles, droppedFiles)
   $uploadInput.files = mergedFileLists
   resetUploadedContainer()
   createView(mergedFileLists)
