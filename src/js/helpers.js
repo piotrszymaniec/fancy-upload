@@ -26,6 +26,18 @@ function createUniqueFileList(fileList1, fileList2) {
   return dataContainer.files
 }
 
+function preventDroppingFilesOutsideDropzone() {
+  window.addEventListener("dragover", (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+
+  })
+
+  window.addEventListener('drop', (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+  })
+}
 
 function chooseIconName(fileName, fileMimeType) {
   const fileExtension = fileName.split('.').pop()
@@ -52,4 +64,4 @@ function formatBytes(bytes) {
   return num.toString() + " " + units[i];
 }
 
-export { formatBytes, chooseIconName, createUniqueFileList }
+export { formatBytes, chooseIconName, createUniqueFileList, preventDroppingFilesOutsideDropzone }

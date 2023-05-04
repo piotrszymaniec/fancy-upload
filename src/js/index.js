@@ -1,6 +1,9 @@
 import { fileStorage } from "./storage.js"
 import { createView, resetView, resetUploadedContainer } from "./view.js"
+import { preventDroppingFilesOutsideDropzone } from "./helpers.js"
 import { $uploadInput, $dropzone, $removeFilesBtn } from "./dom-elements.js"
+
+preventDroppingFilesOutsideDropzone()
 
 $uploadInput.addEventListener('click', onFormInputClick)
 $uploadInput.addEventListener('change', onFileBrowsed)
