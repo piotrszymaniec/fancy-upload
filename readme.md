@@ -17,7 +17,7 @@ Files will stay listed in form until you decide to "cancel" upload.
   
     
 ## 🎉Demo
-Check component demo [here.]()
+Check component demo [here](https://funny-moxie-9c3631.netlify.app/)
 
 ## Usage instruction
 Soon 🕐 🙃
@@ -43,7 +43,7 @@ Some files does not include `type` property when uploaded via input, its mime ty
 ## 🙏 Thanks
 - **Artem** for nice wider dash border used in file dropzone https://kovart.github.io/dashed-border-generator/
 - **Robert Jablonski** for FallingSky font - https://www.fontspace.com/kineticplasma-fonts
-- to someone who made lovely icon set found on https://www.svgrepo.com/collection/files-folders-5/ 
+- to someone who made lovely icon set found on https://www.svgrepo.com/collection/files-folders-5/ and inspired me to add few more :)
 I really appreciate your work! (If you happen to know who did it, let me know!)
 
 ## ❓ Questions
