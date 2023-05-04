@@ -17,8 +17,7 @@ function onFormInputClick() {
 
 function onFileBrowsed(e) {
   const { target: { files } } = e
-  const mergedFileLists = fileStorage.addFiles(files)
-  $uploadInput.files = mergedFileLists
+  $uploadInput.files = fileStorage.addFiles(files)
   resetUploadedContainer()
   createView(mergedFileLists)
 }
@@ -26,8 +25,7 @@ function onFileBrowsed(e) {
 function onFilesDropped(e) {
   e.preventDefault()
   const droppedFiles = e.dataTransfer.files
-  const mergedFileLists = fileStorage.addFiles(droppedFiles)
-  $uploadInput.files = mergedFileLists
+  $uploadInput.files = fileStorage.addFiles(droppedFiles)
   resetUploadedContainer()
   createView(mergedFileLists)
 }
