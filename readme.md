@@ -1,31 +1,50 @@
-# Multiple file upload form
+<div align="center">
+<h1 align="center">Fancy multi file upload form</h1>
+<img align=center" src="https://github.com/piotrszymaniec/fancy-upload/blob/master/fancy-upload-default.png" alt="fancyupload form layout" style="width: 653px;">
+<img src="https://github.com/piotrszymaniec/fancy-upload/blob/master/fancy-upload-files.png" alt="fancyupload form layout" style="width: 453px;">
+</div>
 
-It shows well formated list of files after droping them on form area, or choosing them with built-in browser.
-File details consists of file icon, name, its mime type, and size in human readable format.
+## ✨ Introduction
+Fancy-upload is form component that enables you to easily track files added for upload.  
+It also gives you extra capabilities which plain `<input type="file">` does not have. Below you will find a list.
 
-Form features:
-- drag and drop
-- file listing with cute icons, size and  mime type (if available)
-- removing files from input
-- you can add as many files as you want! Form will not reset until you press "cancel" button resigning from upload
-- simple file duplicate detection - if name, size and type are the same, files are considered duplicates
+1. Select files with Drag and drop.
+2. Persisting files select (by default another file browsing erases previous selection).  
+Files will stay listed in form until you decide to "cancel" upload.
+3. List details that consists of file icon, name, its mime type and size in human readable format
+4. Files can be removed one by one from form
+5. Simple file duplicate detection - if name, size and type are the same, files are considered duplicates
+  
+    
+## 🎉Demo
+Check component demo [here.]()
 
-![fancyupload form layout](https://github.com/piotrszymaniec/fancy-upload/blob/master/fancy-upload-files.png?raw=true)
-
-File icon is decided upon inspecting file **type** and **name** properties from **FileList** object of `<input type="file">` control.     
-
-**Note**: Script assumes that file extension is compliant to its mime type.  
-Some files does not include file.type property when uploaded via input, its mime type is missing so message "not available" is displayed instead.  
 ## Usage instruction
-soon :)
+Soon 🕐 🙃
 
----
-### TODO
-- [ ] Recognize file mime types that has empty file.type property, like **psd** or **woff**.
-- [ ] Add form submition logic, and config for server endpoint
+## 🛠 Built with
++ HTML
++ Drag and Drop and File API
++ CSS
++ Figma
+
+### ⚙️ Technical notes
+File icon is decided upon inspecting file **type** and **name** properties of **File** objects from `<input type="file">` control.     
+Script assumes that file extension is compliant to its mime type.  
+Some files does not include `type` property when uploaded via input, its mime type is missing so message "not available" is displayed instead.  
+
+### ⏳ TODO
 - [ ] Move to format suitable for easy usage
+- [ ] Add summary listing file count and overal size of upload 
+- [ ] Add form submition logic, and config for server endpoint
+- [ ] Recognize file mime types that has empty file.type property, like **psd** or **woff**.
 
-## Thanks
-- whoever made this lovely icons set and uploaded it to https://www.svgrepo.com/collection/files-folders-5/
-- nice wider dash border for file drop zone https://kovart.github.io/dashed-border-generator/
-- FallingSky font - free for personal use https://www.ffonts.net/Falling-Sky-Condensed.font?text=filename
+
+## 🙏 Thanks
+- **Artem** for nice wider dash border used in file dropzone https://kovart.github.io/dashed-border-generator/
+- **Robert Jablonski** for FallingSky font - https://www.fontspace.com/kineticplasma-fonts
+- to someone who made lovely icon set found on https://www.svgrepo.com/collection/files-folders-5/ 
+I really appreciate your work! (If you happen to know who did it, let me know!)
+
+## ❓ Questions
+For questions related to using form, you can [raise issue here](https://github.com/piotrszymaniec/fancy-upload/issues/new), or send me an email: [**piotr.szymaniec@gmail.com**](mailto:piotr.szymaniec@gmail.com). Also if you found any bugs or unexpected behavior let me know via issues.
