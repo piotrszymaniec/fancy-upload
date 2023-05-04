@@ -42,6 +42,7 @@ function createFileItemElement({ name, size, type }, index) {
     fileItemElement.remove()
     if (fileStorage.isEmpty()) {
       hideElement($controls)
+      hideElement($uploadedContainer)
     }
   })
   fileItemElement.append(removeBtn)
