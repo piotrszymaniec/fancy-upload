@@ -8,6 +8,16 @@ $dropzone.addEventListener('dragover', (e) => {
   e.preventDefault()
 })
 
+$dropzone.addEventListener('dragenter', function () {
+  this.classList.add('hover')
+})
+$dropzone.addEventListener('dragleave', function () {
+  this.classList.remove('hover')
+})
+$dropzone.addEventListener('drop', function () {
+  this.classList.remove('hover')
+})
+
 $dropzone.addEventListener('drop', onFilesDropped)
 $removeFilesBtn.addEventListener('click', onFilesRemove)
 
