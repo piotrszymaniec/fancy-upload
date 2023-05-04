@@ -13,7 +13,11 @@ const fileStorage = {
   },
   removeFile(index) {
     this.data.items.remove(index)
+  },
+  isEmpty() {
+    return this.data.files.length === 0
   }
+
 }
 
 export { fileStorage }

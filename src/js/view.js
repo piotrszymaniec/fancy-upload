@@ -40,6 +40,9 @@ function createFileItemElement({ name, size, type }, index) {
     removeFileListItem($uploadInput.files, index)
     fileStorage.removeFile(index)
     fileItemElement.remove()
+    if (fileStorage.isEmpty()) {
+      hideElement($controls)
+    }
   })
   fileItemElement.append(removeBtn)
   return fileItemElement
