@@ -9,8 +9,9 @@ function resetUploadIcon() {
   $downloadImg.src = 'assets/icons/file-upload-icon.svg'
 }
 
-function createElement(htmlString, className) {
+function createElement(htmlString, className, dataAttribute = '') {
   const element = document.createElement('div')
+  element.setAttribute(dataAttribute, '')
   element.classList.add(className)
   element.innerHTML = htmlString
   return element
@@ -32,7 +33,7 @@ function createFileItemElement({ name, size, type }, index) {
       </div>
     </div>        
   `
-  const fileItemElement = createElement(htmlString, 'uploaded-file-item')
+  const fileItemElement = createElement(htmlString, 'uploaded-file-item', 'data-fancyupload-container-item')
   const removeBtn = createElement('', 'file__remove')
   removeBtn.addEventListener('click', () => {
 
