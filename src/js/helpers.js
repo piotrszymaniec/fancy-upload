@@ -46,12 +46,13 @@ function formatBytes(bytes) {
 }
 
 function createHtmlString({ name, size, type }) {
+  const isEmpty = (str) => str === ''
   return ` 
   <div class="file__type"><img src="./assets/icons/filetype/${chooseIconName(name, type)}.svg" alt="file type icon">
   </div>
   <div class="file__info">
     <div class="file__info__name">${name}</div>
-    <div class="file__info__type">${type}</div>
+    <div class="file__info__type">${isEmpty(type) ? 'not available' : type}</div>
     <div class="file__info__size">${formatBytes(size)}</div>
   </div>
   `
