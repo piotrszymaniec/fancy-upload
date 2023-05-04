@@ -1,5 +1,5 @@
 import { fileStorage } from "./storage.js"
-import { createView, resetView, resetUploadedContainer, clearFormInput } from "./view.js"
+import { createView, resetView, resetUploadedContainer } from "./view.js"
 import { $uploadInput, $dropzone, $removeFilesBtn } from "./dom-elements.js"
 
 $uploadInput.addEventListener('click', onFormInputClick)
@@ -33,5 +33,4 @@ function onFilesDropped(e) {
 function onFilesRemove() {
   fileStorage.removeFiles()
   resetView()
-  clearFormInput()
 }

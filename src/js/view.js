@@ -75,7 +75,8 @@ function createView(files) {
 function resetView() {
   resetUploadedContainer()
   resetUploadIcon()
+  clearFormInput()
   hideElement($controls)
 }
 
-export { createView, clearFormInput, resetView, resetUploadedContainer }
+export { createView, resetView, resetUploadedContainer }
