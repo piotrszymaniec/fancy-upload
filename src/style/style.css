@@ -82,7 +82,10 @@
   background-color: #ff8181;
 }
 
-.fancyupload .controls .submit-btn,
+.fancyupload .controls .submit-btn {
+  background: hsl(110deg 84.85% 87.06%);
+}
+
 .fancyupload .controls .submit-btn:hover {
   background-color: #a4f494;
 }
