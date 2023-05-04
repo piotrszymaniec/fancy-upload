@@ -34,7 +34,7 @@ function createFileItemElement({ name, size, type }, index) {
     </div>        
   `
   const fileItemElement = createElement(htmlString, 'uploaded-file-item', 'data-fancyupload-container-item')
-  const removeBtn = createElement('', 'file__remove')
+  const removeBtn = createElement('', 'file-remove')
   removeBtn.addEventListener('click', () => {
 
     removeFileListItem($uploadInput.files, index)

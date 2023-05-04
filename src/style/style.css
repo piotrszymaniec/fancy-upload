@@ -143,14 +143,14 @@
   font-family: monospace;
 }
 
-.file__remove {
+.file-remove {
   width: 24px;
   height: 24px;
   background-image: url(../assets/icons/trash-bin.gif);
   cursor: pointer;
 }
 
-.file__remove:hover {
+.file-remove:hover {
   background: url(../assets/icons/trash-bin-animate.gif);
 }
 
