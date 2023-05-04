@@ -10,7 +10,7 @@ Form features:
 - you can add as many files as you want! Form will not reset until you press "cancel" button resigning from upload
 - simple file duplicate detection - if name, size and type are the same, files are considered duplicates
 
-![fancyupload form layout](https://github.com/piotrszymaniec/fancyupload/blob/master/fancy-upload-files.jpg?raw=true)
+![fancyupload form layout](https://github.com/piotrszymaniec/fancy-upload/blob/master/fancy-upload-files.png?raw=true)
 
 File icon is decided upon inspecting file **type** and **name** properties from **FileList** object of `<input type="file">` control.     
 
