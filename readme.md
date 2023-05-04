@@ -6,6 +6,7 @@ Form features:
 - drag and drop
 - file listing with cute icons, size and  mime type (if available)
 - removing files from input
+- you can add as many files as you want! Form will not reset until you press "cancel" button resigning from upload
 
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
@@ -19,7 +20,6 @@ soon :)
 ---
 ### TODO
 - [ ] recognize file types that has missing mime types like **psd** or **woff** to name a few
-- [ ] add functionality for removing selected file from uploaded list
 - [ ] add form submition logic
 - [ ] move to format suitable for external usageg
 

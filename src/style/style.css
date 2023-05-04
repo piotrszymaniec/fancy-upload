@@ -50,7 +50,10 @@
 
 .fancyupload .controls {
   text-align: right;
-  margin: 20px;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  margin: 15px 10px 10px;
 }
 
 .fancyupload .controls button {
@@ -62,15 +65,21 @@
   font-family: 'FallingSky';
   font-size: 1em;
   letter-spacing: 0.5px;
+  box-shadow: hsl(180deg 4% 90.2%) 2px 2px 4px 0px;
 }
 
-.fancyupload .controls button:hover {
-  background-color: #c6c6c6;
-
-}
-
+.fancyupload .controls .remove-files-btn,
 .fancyupload .controls .remove-files-btn:hover {
-  background-color: #ff000029;
+  background-color: #fac2c2;
+}
+
+.fancyupload .controls .submit-btn,
+.fancyupload .controls .submit-btn:hover {
+  background-color: #a4f494;
+}
+
+.fancyupload .controls .submit-btn:disabled {
+  cursor: not-allowed;
 }
 
 .fancyupload .uploaded-container {
@@ -82,7 +91,7 @@
 .fancyupload .uploaded-container .uploaded-file-item {
   background-color: #fafcfd;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   border: 1px solid hsl(180deg 9.09% 89.22%);
   border-radius: 4px;
   margin-bottom: 10px;
@@ -96,12 +105,12 @@
   align-items: center;
 }
 
-.file__type {
+.file__icon {
   position: relative;
   top: 2px;
 }
 
-.file__type img {
+.file__icon img {
   width: 56px;
   height: 56px;
   object-fit: contain;
@@ -131,15 +140,15 @@
   font-family: monospace;
 }
 
-.trash-icon {
+.file__remove {
   width: 24px;
   height: 24px;
-  background-image: url(./assets/icons/trash-bin.gif);
+  background-image: url(../assets/icons/trash-bin.gif);
   cursor: pointer;
 }
 
-.trash-icon:hover {
-  background: url(./assets/icons/trash-bin-animate.gif);
+.file__remove:hover {
+  background: url(../assets/icons/trash-bin-animate.gif);
 }
 
 .fancyupload .uploaded-container.hidden,
