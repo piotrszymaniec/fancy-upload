@@ -61,16 +61,19 @@
   border: 1px solid #bdbdbd;
   padding: 7px 14px;
   border-radius: 3px;
-  transition: background-color ease-in 0.3s;
+  transition: background-color ease-in 0.2s;
   font-family: 'FallingSky';
   font-size: 1em;
   letter-spacing: 0.5px;
   box-shadow: hsl(180deg 4% 90.2%) 2px 2px 4px 0px;
 }
 
-.fancyupload .controls .remove-files-btn,
-.fancyupload .controls .remove-files-btn:hover {
+.fancyupload .controls .remove-files-btn {
   background-color: #fac2c2;
+}
+
+.fancyupload .controls .remove-files-btn:hover {
+  background-color: #ff8181;
 }
 
 .fancyupload .controls .submit-btn,
