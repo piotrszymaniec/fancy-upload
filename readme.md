@@ -1,28 +1,29 @@
-# Multiple file upload form layout.
-## file upload widget
+# Multiple file upload form
+
+It shows well formated list of files after droping them on form area, or choosing them with built-in browser.
+
+Form features:
+- drag and drop
+- file listing with cute icons, size and  mime type (if available)
+- removing files from input
+
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
-Selected file(s) shows its details in pleasant looking format.
-  
-File icon is decided upon inspecting file **type** and **name** properties from **FileList** object of `<input type="file">` control.   
-  
-It checks if there is icon available for file extension, then if fist part of mime type is one of 'audio', 'video', 'image'. 
-if there is no mime type or mime starts with 'application' 'unknown.svg' icon is choosen.
+File icon is decided upon inspecting file **type** and **name** properties from **FileList** object of `<input type="file">` control.     
+
+**Note**: Script assumes that file extension is compliant to its mime type.  
+Some files does not include property of type when uploaded via input, so its mime type is missing.  
+## How to use
+soon :)
 
 ---
-
-Modified and added several file icons:
-  - js, ts, json, odt, ogg,  blank icon
-  - audio, image, video (general files)
-
 ### TODO
-- [x] add file size in Bytes, and Kilobytes
-- [ ] transfer from demo to easy external implementation
-- [ ] add form submition logic
+- [ ] recognize file types that has missing mime types like **psd** or **woff** to name a few
 - [ ] add functionality for removing selected file from uploaded list
-- [ ] more file icons for popular mime types http://www.iana.org/assignments/media-types/media-types.xhtml
+- [ ] add form submition logic
+- [ ] move to format suitable for external usageg
 
 ## Thanks
-- whoever made this lovely file icons and uploaded it to https://www.svgrepo.com/collection/files-folders-5/
-- nice wider dash in file drop zone https://kovart.github.io/dashed-border-generator/
+- whoever made this lovely icons set and uploaded it to https://www.svgrepo.com/collection/files-folders-5/
+- nice wider dash border for file drop zone https://kovart.github.io/dashed-border-generator/
 - FallingSky font - free for personal use https://www.ffonts.net/Falling-Sky-Condensed.font?text=filename
