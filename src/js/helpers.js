@@ -47,7 +47,6 @@ function createUniqueFileList(fileList1, fileList2) {
 }
 
 
-
 function chooseIconName(fileName, fileMimeType) {
   const fileExtension = fileName.split('.').pop()
   const isIconAvailable = fileIcons.includes(fileExtension)
@@ -85,15 +84,15 @@ function createFileItemElement({ name, size, type }, index) {
       </div>
     </div>        
   `
-  const item = createElement(htmlString, 'uploaded-file-item')
+  const fileItemElement = createElement(htmlString, 'uploaded-file-item')
   const removeBtn = createElement('', 'file__remove')
   removeBtn.addEventListener('click', () => {
     const files = Array.from($uploadInput.files)
     files.splice(index, 1)
-    item.remove()
+    fileItemElement.remove()
   })
-  item.append(removeBtn)
-  return item
+  fileItemElement.append(removeBtn)
+  return fileItemElement
 }
 
 function showElement(element) {
