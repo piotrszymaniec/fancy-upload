@@ -1,24 +1,6 @@
-import { createView, resetView, resetUploadedContainer, clearFormInput, createUniqueFileList } from "./helpers.js"
-
-const $fancyUpload = document.querySelector('[data-fancyupload]')
-const $dropzone = $fancyUpload.querySelector('[data-fancyupload-dropzone]')
-const $uploadInput = $fancyUpload.querySelector('[data-fancyupload-input]')
-const $removeFilesBtn = $fancyUpload.querySelector('[data-fancyupload-remove-files-btn]')
-
-const fileStorage = {
-  data: new DataTransfer(),
-  addFiles(fileList) {
-    const mergedFileLists = createUniqueFileList(this.data.files, fileList)
-    this.removeFiles()
-    Array.from(mergedFileLists).forEach(file => this.data.items.add(file))
-  },
-  getFiles() {
-    return this.data.files
-  },
-  removeFiles() {
-    this.data.items.clear()
-  }
-}
+import { fileStorage } from "./storage.js"
+import { createView, resetView, resetUploadedContainer, clearFormInput } from "./view.js"
+import { $uploadInput, $dropzone, $removeFilesBtn } from "./dom-elements.js"
 
 $uploadInput.addEventListener('click', onFormInputClick)
 $uploadInput.addEventListener('change', onFileBrowsed)
@@ -35,7 +17,7 @@ function onFormInputClick() {
 
 function onFileBrowsed(e) {
   const { target: { files } } = e
-  const mergedFileLists = createUniqueFileList(fileStorage.getFiles(), files)
+  const mergedFileLists = fileStorage.addFiles(files)
   $uploadInput.files = mergedFileLists
   resetUploadedContainer()
   createView(mergedFileLists)
@@ -45,7 +27,8 @@ function onFilesDropped(e) {
   e.preventDefault()
   const currentFiles = $uploadInput.files
   const droppedFiles = e.dataTransfer.files
-  const mergedFileLists = createUniqueFileList(currentFiles, droppedFiles)
+  const mergedFileLists = fileStorage.addFiles(droppedFiles)
+  // const mergedFileLists = createUniqueFileList(currentFiles, droppedFiles)
   $uploadInput.files = mergedFileLists
   resetUploadedContainer()
   createView(mergedFileLists)
