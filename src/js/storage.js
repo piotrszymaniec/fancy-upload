@@ -13,6 +13,9 @@ const fileStorage = {
   },
   removeFiles() {
     this.data.items.clear()
+  },
+  removeFile(index) {
+    this.data.items.remove(index)
   }
 }
 

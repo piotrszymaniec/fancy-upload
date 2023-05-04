@@ -1,5 +1,6 @@
 import { formatBytes, chooseIconName } from "./helpers.js"
 import { $downloadImg, $uploadInput, $uploadedContainer, $controls } from './dom-elements.js'
+import { fileStorage } from "./storage.js"
 
 function setUploadIconSuccess() {
   $downloadImg.src = 'assets/icons/file-upload-success.svg'
@@ -36,6 +37,7 @@ function createFileItemElement({ name, size, type }, index) {
   removeBtn.addEventListener('click', () => {
 
     removeFileListItem($uploadInput.files, index)
+    fileStorage.removeFile(index)
     fileItemElement.remove()
   })
   fileItemElement.append(removeBtn)
