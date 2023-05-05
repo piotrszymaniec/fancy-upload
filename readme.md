@@ -11,7 +11,7 @@ It also gives you extra capabilities which plain `<input type="file">` does not 
 1. Select files with Drag and drop.
 2. Persisting files select (by default another file browsing erases previous selection).  
 Files will stay listed in form until you decide to "cancel" upload.
-3. List details that consists of file icon, name, its mime type and size in human readable format
+3. List details that consists of colorful distinct file icon, name, its mime type and size in human readable format 
 4. Files can be removed one by one from form
 5. Simple file duplicate detection - if name, size and type are the same, files are considered duplicates
   
