@@ -34,6 +34,11 @@
   padding: 20px 40px;
 }
 
+.fancyupload .dropzone:hover {
+  cursor: pointer;
+  background-color: #eef8ff;
+}
+
 .fancyupload .dropzone.hover {
   background-color: #daf1ff;
   cursor: grabbing;

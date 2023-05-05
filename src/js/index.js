@@ -10,6 +10,9 @@ $uploadInput.addEventListener('change', onFileBrowsed)
 $dropzone.addEventListener('dragover', (e) => {
   e.preventDefault()
 })
+$dropzone.addEventListener('click', (e) => {
+  $uploadInput.dispatchEvent(new MouseEvent('click'))
+})
 
 $dropzone.addEventListener('dragenter', function () {
   this.classList.add('hover')
